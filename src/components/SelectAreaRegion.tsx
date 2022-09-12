@@ -79,7 +79,7 @@ export const SelectAreaRegion: React.FC<ISelectAreaRegionProps> = () => {
           {selectedBoxes.map((boxItem, i) => {
             return (
               <View
-                pointerEvents="none" //
+                pointerEvents="none"
                 key={`key-${i}`}
                 style={[
                   styles.box,
@@ -107,8 +107,8 @@ export const SelectAreaRegion: React.FC<ISelectAreaRegionProps> = () => {
       </View>
       <View style={{justifyContent: `center`}}>
         <Text>Pointers</Text>
-        {selectedBoxes.map(box => (
-          <View key={box.height}>
+        {selectedBoxes.map((box, i) => (
+          <View key={`key-${i}`}>
             <Text>
               Height: {showLastTwoDecimal(box.height)}, width:{' '}
               {showLastTwoDecimal(box.width)}
